@@ -21,9 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 my_secret_key = os.environ.get("my_secret_key")
-print('{}'.format(my_secret_key))
 
 SECRET_KEY = my_secret_key
+db_name = os.environ.get("db_name")
+db_user = os.environ.get("db_user")
+db_password = os.environ.get("db_password")
+db_host = os.environ.get("db_host")
+db_port = os.environ.get("db_port")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -76,12 +81,25 @@ WSGI_APPLICATION = 'fortune_telling.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+
+# postgresql用にDBを設定
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': db_name,
+         'USER': db_user,
+         'PASSWORD': db_password,
+         'HOST': db_host,
+         'PORT': db_port,
+     }
+ }
 
 
 # Password validation
