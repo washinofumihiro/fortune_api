@@ -98,3 +98,7 @@ ENV/
 /site
 
 .idea/
+
+
+staticfiles
+db.sqlite3
