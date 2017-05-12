@@ -102,3 +102,5 @@ ENV/
 
 staticfiles
 db.sqlite3
+
+.envrc
