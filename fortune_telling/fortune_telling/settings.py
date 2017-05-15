@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fortune_result',
     'bootstrapform',  # django-bootstrap-form
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
