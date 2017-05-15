@@ -8,14 +8,14 @@ class BloodType(models.Model):
     # def __str__(self):
     #     return self.blood_type
     #
-    #
-    # def __repr__(self):
-    #     # 主キーとresultを表示させて見やすくする
-    #     # ex) 1: Alice
-    #     return "{}: {}".format(self.pk, self.blood_type)
-    #
-    #
-    # __str__ = __repr__  # __str__にも同じ関数を適用
+
+    def __repr__(self):
+        # 主キーとresultを表示させて見やすくする
+        # ex) 1: Alice
+        return "{}: {}".format(self.pk, self.blood_type)
+
+
+    __str__ = __repr__  # __str__にも同じ関数を適用
 
 
 class Result(models.Model):
