@@ -8,13 +8,13 @@ from .models import Result, BloodType
 class BloodTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = BloodType
-        fields = ('b_type',)
+        fields = ('blood_type',)
 
 
 class ResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = Result
-        fields = ('result', 'date')
+        fields = ('result', 'date', )
 
 
 
