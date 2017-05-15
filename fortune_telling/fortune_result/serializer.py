@@ -12,9 +12,10 @@ class BloodTypeSerializer(serializers.ModelSerializer):
 
 
 class ResultSerializer(serializers.ModelSerializer):
+    blood_type = BloodTypeSerializer()
+
     class Meta:
         model = Result
         fields = ('result', 'date', 'blood_type')
-
 
 
