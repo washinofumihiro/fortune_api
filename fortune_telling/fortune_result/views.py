@@ -1,9 +1,13 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+# coding: utf-8
+
+import django_filters
+from rest_framework import viewsets, filters
+
+from .models import Result
+from .serializer import ResultSerializer
 
 
-# Create your views here.
+class ResultViewSet(viewsets.ModelViewSet):
+    queryset = Result.objects.all()
+    serializer_class = ResultSerializer
 
-def get_fortune(request):
-    # getメソッドの作成
-    return HttpResponse('get')
