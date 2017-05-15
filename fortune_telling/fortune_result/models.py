@@ -25,7 +25,7 @@ class Result(models.Model):
     date = models.CharField('日付', max_length=255, default="")
 
     # blood_type = models.ForeignKey(BloodType, related_name="entries")
-    b_type = models.ForeignKey(BloodType, related_name='entries')
+    blood_type = models.ForeignKey(BloodType, related_name='entries')
 
     # def __str__(self):
     #     return self.result
