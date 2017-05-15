@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fortune_result',
+    'bootstrapform',  # django-bootstrap-form
 ]
 
 MIDDLEWARE = [
