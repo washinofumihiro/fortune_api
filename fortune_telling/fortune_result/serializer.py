@@ -8,4 +8,4 @@ from .models import Result
 class ResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = Result
-        fields = 'result'
+        fields = ('result',)
