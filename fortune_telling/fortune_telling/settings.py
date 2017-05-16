@@ -150,3 +150,26 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
+#
+# # クエリの確認に使用
+# LOGGING = {
+#     'version': 1,
+#     'formatters': {
+#         'all': {
+#             'format': '%(message)s'
+#         },
+#     },
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'all',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#            'handlers': ['console'],
+#            'level': 'DEBUG',
+#         },
+#     },
+# }
