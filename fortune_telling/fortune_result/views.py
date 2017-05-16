@@ -48,23 +48,27 @@ class ATypeResultViewSet(viewsets.ModelViewSet):
     queryset = ATypeResult.objects.all()
     # queryset = Result.objects.filter(blood_type=1)
     serializer_class = ATypeResultSerializer
+    lookup_field = 'date'
 
 
 class BTypeResultViewSet(viewsets.ModelViewSet):
     queryset = BTypeResult.objects.all()
     # queryset = Result.objects.filter(blood_type=1)
     serializer_class = BTypeResultSerializer
+    lookup_field = 'date'
 
 
 class OTypeResultViewSet(viewsets.ModelViewSet):
     queryset = OTypeResult.objects.all()
     # queryset = Result.objects.filter(blood_type=1)
     serializer_class = OTypeResultSerializer
+    lookup_field = 'date'
 
 
 class ABTypeResultViewSet(viewsets.ModelViewSet):
     queryset = ABTypeResult.objects.all()
     # queryset = Result.objects.filter(blood_type=1)
     serializer_class = ABTypeResultSerializer
+    lookup_field = 'date'
 
 
