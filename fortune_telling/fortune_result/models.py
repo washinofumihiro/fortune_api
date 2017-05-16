@@ -37,28 +37,28 @@ class Result(models.Model):
     #
     # __str__ = __repr__  # __str__にも同じ関数を適用
 
-#
-# class ATypeResult(models.Model):
-#
-#     result = models.TextField('占い結果')
-#     date = models.CharField('日付', max_length=255, default="")
-#
-#
-# class BTypeResult(models.Model):
-#
-#     result = models.TextField('占い結果')
-#     date = models.CharField('日付', max_length=255, default="")
-#
-#
-# class OTypeResult(models.Model):
-#
-#     result = models.TextField('占い結果')
-#     date = models.CharField('日付', max_length=255, default="")
-#
-#
-# class ABTypeResult(models.Model):
-#
-#     result = models.TextField('占い結果')
-#     date = models.CharField('日付', max_length=255, default="")
-#
+
+class ATypeResult(models.Model):
+
+    result = models.TextField('占い結果')
+    date = models.CharField('日付', max_length=255, default="")
+
+
+class BTypeResult(models.Model):
+
+    result = models.TextField('占い結果')
+    date = models.CharField('日付', max_length=255, default="")
+
+
+class OTypeResult(models.Model):
+
+    result = models.TextField('占い結果')
+    date = models.CharField('日付', max_length=255, default="")
+
+
+class ABTypeResult(models.Model):
+
+    result = models.TextField('占い結果')
+    date = models.CharField('日付', max_length=255, default="")
+
 

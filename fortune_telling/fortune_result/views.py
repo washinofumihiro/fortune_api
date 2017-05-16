@@ -4,10 +4,10 @@ import django_filters
 from rest_framework import viewsets, filters
 
 from .models import BloodType, Result
-# from .models import ATypeResult, BTypeResult, OTypeResult, ABTypeResult
+from .models import ATypeResult, BTypeResult, OTypeResult, ABTypeResult
 from .serializer import BloodTypeSerializer, ResultSerializer
-# from .serializer import ATypeResultSerializer, BTypeResultSerializer, \
-#     OTypeResultSerializer, ABTypeResultSerializer
+from .serializer import ATypeResultSerializer, BTypeResultSerializer, \
+    OTypeResultSerializer, ABTypeResultSerializer
 
 
 class BloodTypeViewSet(viewsets.ModelViewSet):
@@ -17,7 +17,7 @@ class BloodTypeViewSet(viewsets.ModelViewSet):
 
     # queryset = list(BloodType.objects.all()) + list(Result.objects.all())
 
-    print(queryset)
+    # print(queryset)
     # queryset = BloodType.objects.all()
     # queryset = BloodType.objects.all().prefetch_related("entries")[0].entries.all()[0]
     # queryset = BloodType.objects.all().prefetch_related("entries").get(id=2).entries.all()
@@ -30,9 +30,9 @@ class BloodTypeViewSet(viewsets.ModelViewSet):
 
     # print(BloodType.objects.all().prefetch_related("entries").get(id=2))
     # print(Result.objects.all().result)
-    report = Result.objects.all()
+    # report = Result.objects.all()
     # report = BloodType.objects.all().prefetch_related("entries").entries.all()
-    print(report.get(blood_type=1).date)
+    # print(report.get(blood_type=1).date)
 
     # print("test")
 
@@ -44,27 +44,27 @@ class ResultViewSet(viewsets.ModelViewSet):
     # print(Result.objects.all()[0])
 
 
-# class ATypeResultViewSet(viewsets.ModelViewSet):
-#     queryset = ATypeResult.objects.all()
-#     # queryset = Result.objects.filter(blood_type=1)
-#     serializer_class = ATypeResultSerializer
-#
-#
-# class BTypeResultViewSet(viewsets.ModelViewSet):
-#     queryset = BTypeResult.objects.all()
-#     # queryset = Result.objects.filter(blood_type=1)
-#     serializer_class = BTypeResultSerializer
-#
-#
-# class OTypeResultViewSet(viewsets.ModelViewSet):
-#     queryset = OTypeResult.objects.all()
-#     # queryset = Result.objects.filter(blood_type=1)
-#     serializer_class = OTypeResultSerializer
-#
-#
-# class ABTypeResultViewSet(viewsets.ModelViewSet):
-#     queryset = ABTypeResult.objects.all()
-#     # queryset = Result.objects.filter(blood_type=1)
-#     serializer_class = ABTypeResultSerializer
+class ATypeResultViewSet(viewsets.ModelViewSet):
+    queryset = ATypeResult.objects.all()
+    # queryset = Result.objects.filter(blood_type=1)
+    serializer_class = ATypeResultSerializer
+
+
+class BTypeResultViewSet(viewsets.ModelViewSet):
+    queryset = BTypeResult.objects.all()
+    # queryset = Result.objects.filter(blood_type=1)
+    serializer_class = BTypeResultSerializer
+
+
+class OTypeResultViewSet(viewsets.ModelViewSet):
+    queryset = OTypeResult.objects.all()
+    # queryset = Result.objects.filter(blood_type=1)
+    serializer_class = OTypeResultSerializer
+
+
+class ABTypeResultViewSet(viewsets.ModelViewSet):
+    queryset = ABTypeResult.objects.all()
+    # queryset = Result.objects.filter(blood_type=1)
+    serializer_class = ABTypeResultSerializer
 
 
