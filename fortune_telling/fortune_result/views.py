@@ -4,7 +4,10 @@ import django_filters
 from rest_framework import viewsets, filters
 
 from .models import BloodType, Result
+# from .models import ATypeResult, BTypeResult, OTypeResult, ABTypeResult
 from .serializer import BloodTypeSerializer, ResultSerializer
+# from .serializer import ATypeResultSerializer, BTypeResultSerializer, \
+#     OTypeResultSerializer, ABTypeResultSerializer
 
 
 class BloodTypeViewSet(viewsets.ModelViewSet):
@@ -39,4 +42,29 @@ class ResultViewSet(viewsets.ModelViewSet):
     queryset = Result.objects.filter(blood_type=1)
     serializer_class = ResultSerializer
     # print(Result.objects.all()[0])
+
+
+# class ATypeResultViewSet(viewsets.ModelViewSet):
+#     queryset = ATypeResult.objects.all()
+#     # queryset = Result.objects.filter(blood_type=1)
+#     serializer_class = ATypeResultSerializer
+#
+#
+# class BTypeResultViewSet(viewsets.ModelViewSet):
+#     queryset = BTypeResult.objects.all()
+#     # queryset = Result.objects.filter(blood_type=1)
+#     serializer_class = BTypeResultSerializer
+#
+#
+# class OTypeResultViewSet(viewsets.ModelViewSet):
+#     queryset = OTypeResult.objects.all()
+#     # queryset = Result.objects.filter(blood_type=1)
+#     serializer_class = OTypeResultSerializer
+#
+#
+# class ABTypeResultViewSet(viewsets.ModelViewSet):
+#     queryset = ABTypeResult.objects.all()
+#     # queryset = Result.objects.filter(blood_type=1)
+#     serializer_class = ABTypeResultSerializer
+
 

@@ -3,6 +3,7 @@
 from rest_framework import serializers
 
 from .models import Result, BloodType
+# from .models import ATypeResult, BTypeResult, OTypeResult, ABTypeResult
 
 
 class BloodTypeSerializer(serializers.ModelSerializer):
@@ -23,4 +24,31 @@ class ResultSerializer(serializers.ModelSerializer):
         model = Result
         fields = ('result', 'date', 'blood_type')
 
-
+#
+# class ATypeResultSerializer(serializers.ModelSerializer):
+#
+#     class Meta:
+#         model = ATypeResult
+#         fields = ('result', 'date')
+#
+#
+# class BTypeResultSerializer(serializers.ModelSerializer):
+#
+#     class Meta:
+#         model = BTypeResult
+#         fields = ('result', 'date')
+#
+#
+# class OTypeResultSerializer(serializers.ModelSerializer):
+#
+#     class Meta:
+#         model = OTypeResult
+#         fields = ('result', 'date')
+#
+#
+# class ABTypeResultSerializer(serializers.ModelSerializer):
+#
+#     class Meta:
+#         model = ABTypeResult
+#         fields = ('result', 'date')
+#
