@@ -23,5 +23,5 @@ from fortune_result.urls import router as result_router
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # fortune_result.urlsをincludeする
-    url(r'^api/', include(result_router.urls)),
+    url(r'^fortune_result/', include(result_router.urls)),
 ]
