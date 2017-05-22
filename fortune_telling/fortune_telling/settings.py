@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'fortune_result',
     'bootstrapform',  # django-bootstrap-form
     'rest_framework',
+    'gunicorn',
 ]
 
 MIDDLEWARE = [
