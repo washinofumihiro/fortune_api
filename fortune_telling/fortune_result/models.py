@@ -21,7 +21,7 @@ class BloodType(models.Model):
 class Result(models.Model):
 
     # name = models.CharField('占い結果')
-    result = models.TextField('占い結果')
+    fortune_result = models.TextField('占い結果')
     date = models.CharField('日付', max_length=255, default="")
 
     # blood_type = models.ForeignKey(BloodType, related_name="entries")
@@ -40,25 +40,25 @@ class Result(models.Model):
 
 class ATypeResult(models.Model):
 
-    result = models.TextField('占い結果')
+    fortune_result = models.TextField('占い結果')
     date = models.CharField('日付', max_length=255, default="", primary_key=True)
 
 
 class BTypeResult(models.Model):
 
-    result = models.TextField('占い結果')
+    fortune_result = models.TextField('占い結果')
     date = models.CharField('日付', max_length=255, default="", primary_key=True)
 
 
 class OTypeResult(models.Model):
 
-    result = models.TextField('占い結果')
+    fortune_result = models.TextField('占い結果')
     date = models.CharField('日付', max_length=255, default="", primary_key=True)
 
 
 class ABTypeResult(models.Model):
 
-    result = models.TextField('占い結果')
+    fortune_result = models.TextField('占い結果')
     date = models.CharField('日付', max_length=255, default="", primary_key=True)
 
 

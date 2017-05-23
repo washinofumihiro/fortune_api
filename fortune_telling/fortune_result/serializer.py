@@ -22,33 +22,33 @@ class ResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Result
-        fields = ('result', 'date', 'blood_type')
+        fields = ('fortune_result', 'date', 'blood_type')
 
 
 class ATypeResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ATypeResult
-        fields = ('result', 'date')
+        fields = ('fortune_result', 'date')
 
 
 class BTypeResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BTypeResult
-        fields = ('result', 'date')
+        fields = ('fortune_result', 'date')
 
 
 class OTypeResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OTypeResult
-        fields = ('result', 'date')
+        fields = ('fortune_result', 'date')
 
 
 class ABTypeResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ABTypeResult
-        fields = ('result', 'date')
+        fields = ('fortune_result', 'date')
 
