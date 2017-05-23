@@ -153,7 +153,7 @@ STATICFILES_DIRS = (
 
 
 #collectstaticで集める場所を決める
-STATIC_ROOT = "/home/fortune/fortune_api/fortune_telling/collelct_static"
+STATIC_ROOT = "/home/fortune/fortune_api/fortune_telling/collect_static"
 
 
 #
