@@ -33,7 +33,7 @@ db_port = os.environ.get("db_port")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -150,6 +150,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+
+#collectstaticで集める場所を決める
+STATIC_ROOT = "/home/fortune/fortune_api/fortune_telling/collelct_static"
+
 
 #
 # # クエリの確認に使用
